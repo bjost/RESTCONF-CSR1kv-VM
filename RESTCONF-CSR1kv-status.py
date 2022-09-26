@@ -1,6 +1,6 @@
 import json, requests
-
-uri = "https://192.168.56.101:443/restconf/data/ietf-interfaces:interfaces-state/"
+ipadd = "192.168.56.101"
+uri = "https://"+ipadd+":443/restconf/data/ietf-interfaces:interfaces-state/"
 payload={}
 headers = {
   'Content-Type': 'application/yang-data+json',

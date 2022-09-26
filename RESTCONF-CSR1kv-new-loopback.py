@@ -1,6 +1,6 @@
 import requests
-
-uri = "https://192.168.56.101:443/restconf/data/ietf-interfaces:interfaces"
+ipadd = "192.168.56.101"
+uri = "https://"+ipadd+":443/restconf/data/ietf-interfaces:interfaces"
 
 headers = {
   'Authorization': 'Basic Y2lzY286Y2lzY28xMjMh',
