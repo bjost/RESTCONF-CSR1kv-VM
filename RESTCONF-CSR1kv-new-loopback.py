@@ -8,7 +8,9 @@ headers = {
   'Content-Type': 'application/yang-data+json'
 }
 
-payload="{\n    \"ietf-interfaces:interface\": {\n        \"name\": \"Loopback110\",\n        \"description\": \"Configured by RESTCONF\",\n        \"type\": \"iana-if-type:softwareLoopback\",\n        \"enabled\": true,\n        \"ietf-ip:ipv4\": {\n            \"address\": [\n                {\n                    \"ip\": \"172.16.110.1\",\n                    \"netmask\": \"255.255.255.0\"\n                }\n            ]\n        }\n    }\n}"
+newLoop = input('Enter the number for the new Loopback interface you wish to create:')
+
+payload="{\n    \"ietf-interfaces:interface\": {\n        \"name\": \"Loopback\"+newLoop,\n        \"description\": \"Configured by RESTCONF\",\n        \"type\": \"iana-if-type:softwareLoopback\",\n        \"enabled\": true,\n        \"ietf-ip:ipv4\": {\n            \"address\": [\n                {\n                    \"ip\": \"172.16.110.1\",\n                    \"netmask\": \"255.255.255.0\"\n                }\n            ]\n        }\n    }\n}"
 
 resp = requests.request("POST", uri, data=payload, headers=headers, verify=False)
 

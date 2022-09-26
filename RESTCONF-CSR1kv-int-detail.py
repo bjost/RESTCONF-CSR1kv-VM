@@ -8,7 +8,7 @@ headers = {
   'Authorization': 'Basic Y2lzY286Y2lzY28xMjMh'
 }
 
-intResp = input("Enter name of interface: ")
+intResp = input("Enter name of interface to show details: ")
 
 try:
     resp = requests.request("GET", uri+'/interface='+intResp, headers=headers, data=payload, verify=False)

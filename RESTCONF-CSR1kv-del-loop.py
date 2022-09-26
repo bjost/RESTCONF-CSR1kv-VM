@@ -9,7 +9,7 @@ headers = {
   'Authorization': 'Basic Y2lzY286Y2lzY28xMjMh'
 }
 
-intResp = input("Enter name of interface: ")
+intResp = input("Enter name of loopback interface to delete: ")
 
 
 resp = requests.request("DELETE", uri+'/interface='+intResp, headers=headers, data=payload, verify=False)
